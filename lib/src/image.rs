@@ -66,7 +66,7 @@ macro_rules! impl_fp {
                 // equivalent to Ord.
                 assert!(a.iter().all(|x| !x.is_nan()));
                 a.iter()
-                    .fold(-std::$t::INFINITY, |x, y| if x < *y { x } else { *y })
+                    .fold(-std::$t::INFINITY, |x, y| if x > *y { x } else { *y })
             }
         }
     };

@@ -37,10 +37,12 @@ fn main() {
     }
 
     color_greyscale(&mut img, &inferno::COLOR_MAP);
-    img.save("/tmp/inferno.png").expect("saving inferno from greyscale image");
+    img.save("/tmp/inferno.png")
+        .expect("saving inferno from greyscale image");
 
     let img = color(w, h, &vec, &inferno::COLOR_MAP, DataRange::MinMax(0, 255));
-    img.save("/tmp/inferno2.png").expect("saving inferno from bytes image");
+    img.save("/tmp/inferno2.png")
+        .expect("saving inferno from bytes image");
 
     let img = color(w, h, &vec, &magma::COLOR_MAP, DataRange::MinMax(0, 255));
     img.save("/tmp/magma.png").expect("saving magma");
